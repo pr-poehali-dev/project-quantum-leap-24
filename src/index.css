@@ -15,35 +15,38 @@
     --popover: 0 0% 0%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 48 100% 50%;
+    --primary: 0 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
+    --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 0 0% 15%;
+    --accent: 0 0% 12%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 26%;
-    --input: 0 0% 26%;
-    --ring: 48 100% 50%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
+
+    --neon: 0 100% 50%;
+    --neon-glow: 0 100% 60%;
 
     --sidebar-background: 0 0% 5%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 48 100% 50%;
+    --sidebar-primary: 0 100% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 0 0% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 48 100% 50%;
+    --sidebar-ring: 0 100% 50%;
   }
 }
 
@@ -82,11 +85,40 @@
   }
 
   .font-sentient {
-    font-family: 'PT Serif', serif;
+    font-family: "PT Serif", serif;
   }
 
   .shadow-glow {
     box-shadow: 0 0 8px 2px var(--tw-shadow-color);
+  }
+
+  .neon-text {
+    color: hsl(var(--neon));
+    text-shadow:
+      0 0 20px hsl(var(--neon) / 0.7),
+      0 0 40px hsl(var(--neon) / 0.4);
+  }
+
+  .neon-border {
+    border-color: hsl(var(--neon));
+    box-shadow: 0 0 12px hsl(var(--neon) / 0.4);
+  }
+
+  .gradient-red {
+    background: linear-gradient(
+      135deg,
+      hsl(0 100% 50%) 0%,
+      hsl(15 100% 45%) 100%
+    );
+  }
+
+  .section-dark {
+    background: linear-gradient(180deg, hsl(0 0% 0%) 0%, hsl(0 0% 5%) 100%);
+  }
+
+  .card-dark {
+    background: hsl(0 0% 7%);
+    border: 1px solid hsl(0 0% 15%);
   }
 }
 
@@ -106,9 +138,13 @@
 
 /* Vignette effect overlay */
 #webgl::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.6) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    transparent 30%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
 }
