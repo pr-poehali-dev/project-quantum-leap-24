@@ -12,8 +12,8 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
 
   const menuItems = [
     { name: "О нас", href: "#about" },
-    { name: "Портфолио", href: "#portfolio" },
-    { name: "Инсайты", href: "#insights" },
+    { name: "Как это работает", href: "#how" },
+    { name: "Автомобили", href: "#cars" },
     { name: "Контакты", href: "#contact" },
   ];
 
@@ -73,7 +73,7 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
                 onClick={handleLinkClick}
                 className="inline-block text-xl font-mono uppercase text-primary transition-colors ease-out duration-150 hover:text-primary/80 py-2"
               >
-                Войти
+                Заказать авто
               </a>
             </div>
           </nav>
